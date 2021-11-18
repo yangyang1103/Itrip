@@ -1,0 +1,7 @@
+dao\TextSolr.class
+pojo\Page.class
+pojo\ItripHotelVO.class
+pojo\SearchHotelVO.class
+dao\BaseDao.class
+Controller\SearchController.class
+pojo\SearchHotCityVO.class

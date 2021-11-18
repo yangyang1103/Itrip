@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>itripbackend</artifactId>
+        <groupId>com.bdqn.itrip</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>itripdao</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.bdqn.itrip</groupId>
+            <version>1.0-SNAPSHOT</version>
+            <artifactId>itriputils</artifactId>
+        </dependency>
+    </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>http://192.168.109.128:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://192.168.109.128:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <build>
+        <resources>
+            <!-- 这个元素描述了项目相关或测试相关的所有资源路径 -->
+            <resource>
+                <!-- 描述存放资源的目录，该路径相对POM路径 -->
+                <directory>src/main/java</directory>
+                <!-- 包含的模式列表，例如**/*.xml. -->
+                <includes>
+                    <include>**/*.xml </include>
+                </includes>
+                <!-- 是否使用参数值代替参数名。参数值取自properties元素或者文件里配置的属性，文件在filters元素里列出。 -->
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
+</project>
